@@ -1,0 +1,27 @@
+<div>
+      <h1 #myHeader>Hello...</h1>
+      <button (click)="test(myHeader)">Click</button>
+
+
+      <div *ngIf="gender=='male'; else elseBlock">
+         this is a man
+      </div>
+
+      <ng-template #elseBlock>
+             this is not male gender
+      </ng-template>
+
+
+      <div [ngSwitch]="gender">
+         <div *ngSwitchCase="'male'">
+             this is male
+         </div>
+         <div *ngSwitchCase="'female'">
+            this is female
+         </div>
+         <div *ngSwitchDefault>
+            THis is boboscro
+         </div>
+      </div>
+
+</div>

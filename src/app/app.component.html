@@ -7,62 +7,39 @@
   <title>Document</title>
 </head>
 <body >
-    <!-- <div class="text">
-      Wecome to Level 4, the class of guant developers!!!!!!
+
+  <!-- <div class="text flex w-full shadow-lg mx-auto">
+    <app-chat-app></app-chat-app>
+    <app-chat-app2></app-chat-app2>
+  </div> -->
+  <app-navbar></app-navbar>
+<router-outlet></router-outlet>
+  <!-- <app-user></app-user> -->
+
+
+<!--   
+  <div class="text w-5/6 flex mx-auto border">
+    <div class="text w-1/2">
+      <app-blogs></app-blogs>
     </div>
-    <div class="text">{{name + " is a developer"}}</div> -->
-    <!-- <button class="text" (click)="showName()">Show Name</button> -->
-    <!-- <input type="text" class="text" (keyup)="showName()" [(ngModel)]="userData"> -->
-    <!-- <input type="text" class="text" (keyup)="getData()" [(ngModel)]="userData">
-    <button class="text" (click)="getData()">Submit</button> -->
-    <app-login>Hello</app-login>
-    <!-- <button class="text bg-blue-500 hover:bg-blue-400 py-1 text-white" (click)="onPageLoad()">Submit</button>  -->
-    <div class="text grid lg:flex mt-6">
-          <div class="text grid  mx-auto  w-5/6  sm:w-4/5  md:w-1/2 lg:w-2/5 border px-10 py-10 gap-8 flex shadow-lg ml-10">
-            <h1 class="text-xl font-bold">Sign Up</h1>
-              <input type="text" name="firstname" placeholder="Name e.g John Doe" class="text" [(ngModel)]="firstname">
-              <input type="text" name="lastname" placeholder="Name e.g John Doe" class="text" [(ngModel)]="lastname">
-              <input type="text" name="age" placeholder="Age" class="text" [(ngModel)]="age">
-              <input type="text" name="password" placeholder="password" class="text" [(ngModel)]="password">
-              <input type="text" name="email" placeholder="email" class="text" [(ngModel)]="email">
-              <button class="text bg-blue-500 hover:bg-blue-400 py-1 text-white" (click)="addUsers()">Submit</button> 
-            </div>
-          
-          <div class="text w-5/6 sm:w-4/5  md:w-1/2 lg:w-3/5 mx-auto mt-6 lg:mt-0">
-            <table class="text border-collapse " align="center">
-              <thead class="text">
-                <tr class="text border border-slate-500 px-5 py-1 ">
-                  <th class="text border border-slate-500 px-5 py-1">S/N</th>
-                  <th class="text border border-slate-500 px-5 py-1">First Name</th>
-                  <th class="text border border-slate-500 px-5 py-1">Last Name</th>
-                  <th class="text border border-slate-500 px-5 py-1">Age</th>
-                  <th class="text border border-slate-500 px-5 py-1">Password</th>
-                  <th class="text border border-slate-500 px-5 py-1">Email</th>
-                </tr>
-              </thead>
-              <tbody class="text">
-                <!-- <tr *ngFor="let user of localData; index as i; first as isFirst"> -->
-                <tr *ngFor="let user of localData">
-                  <!-- <td class="text  border border-slate-500 px-5 py-1" >{{i+1}}</td> -->
-                  <td class="text  border border-slate-500 px-5 py-1" >{{user.firstname}}</td>
-                  <td class="text  border border-slate-500 px-5 py-1">{{user.lastname}}</td>
-                  <td class="text  border border-slate-500 px-5 py-1">{{user.age}}</td>
-                  <td class="text  border border-slate-500 px-5 py-1">{{user.password}}</td>
-                  <td class="text  border border-slate-500 px-5 py-1">{{user.email}}</td>
-              </tr>
-              <!--                
-                <tr class="text  border border-slate-500 px-5 py-1" >
-                  <td class="text  border border-slate-500 px-5 py-1" *ngFor="let x of student.firstname">{{x}}</td>
-                  <td class="text  border border-slate-500 px-5 py-1" *ngFor="let x of student">{{x}}</td>
-                  <td class="text  border border-slate-500 px-5 py-1" *ngFor="let x of student">{{x}}</td>
-                  <td class="text  border border-slate-500 px-5 py-1" *ngFor="let x of student">{{x}}</td>
-                  <td class="text  border border-slate-500 px-5 py-1" *ngFor="let x of student">{{x}}</td>
-                </tr> -->
-              </tbody>
-            </table>
-          </div>
+    <div class="text w-1/2">
+      <app-display-blogs ></app-display-blogs>
     </div>
-  
+  </div> -->
+
+
+  <!-- <app-budget-app></app-budget-app> -->
+  <!-- <app-user></app-user> -->
+  <!-- <hr> -->
+  <!-- <app-display-blogs></app-display-blogs> -->
+   <!-- <app-add-items (sendItem)="addItem($event)"></app-add-items>
+   <app-display-items [allItems]="allItems"></app-display-items> -->
+  <!-- <app-portal></app-portal> -->
+  <!-- <app-login></app-login> -->
+<!-- <app-structural-class></app-structural-class> -->
+
+
+
 </body>
 </html>
 

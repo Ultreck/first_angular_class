@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <div class="text" *ngFor="let item of allUsers; index as i">
+            <p class="text">{{item}}</p>
+            <button class="text border mt-1" (click)="userData.deleteData(i)">Delete</button>
+            <button class="text border mt-1" data-te-toggle="modal" data-te-target="#exampleModalCenter"
+            (click)="userData.editData(i, item)">Edit</button>
+      </div>
+          
+          
+
+</body>
+</html>

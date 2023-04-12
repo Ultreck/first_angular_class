@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <div class="text  w-full py-5 md:p-10 mx-auto">
+            <div class="text  w-full shadow-xl z-30 mx-auto">
+                  <div class="text-center hidden md:flex bg-blue-700 w-full p-2 text-white font-bold text-3xl">Budget App</div>
+                  <div class="text">
+                        <div class="text bg-white w-full md:flex grid gap-10 border-b sticky top-0">
+                              <div class="text-center md:hidden bg-blue-700 w-full p-2 text-white font-bold text-3xl">Budget App</div>
+                              <div class="text  md:w-2/5  px-10 py-2">
+                                    <p class=" font-bold ">Capital: <span class="text text-xl text-blue-800">{{capital}}</span> </p>
+                                    <p class=" font-bold">  Balance: <span class="text-xl text-green-600"> {{balance}}</span> </p>
+                                    <p class=" font-bold">Total Spent: <span class="text-xl text-yellow-600">{{spent}}</span></p>
+                              </div>
+                              <div class="text md:w-3/5 px-10">
+                                    <p [class]="noCapitalErr">
+                                          <li class="text-sm mt-2">
+                                                You failed to set your <span class="text-xl text-red-600">capital</span> , no operation is possible.
+                                          </li>
+                                    </p>
+                                    <p [class]="invalidPrice">
+                                          <li class="text-md mt-2  text-red-600">
+                                           {{invalidPriceText}}
+                                          </li>
+                                    </p>
+                                    <div class="text mt-3">
+                                          <button class="text-white bg-green-500 px-6 py-1 mx-4" (click)="handleAddCap()">Add Capital</button>
+                                          <button [class]="btnchangeCap" (click)="handleChangeCap()">Change Capital</button>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="text grid md:flex mt-10 mx-auto md:border md:border-blue-500">
+                              <div class="text p-3 md:w-2/5">
+                                    <h1 class="text-center bg-blue-600 mb-4 py-1 font-bold text-xl text-white">Create Budget</h1>
+                                    <div class="text border-dashed border-2 border-blue-600 grid p-3 gap-10">
+                                          <h1 class=" text-xl "> Buy Order</h1>
+                                          <input type="text" [(ngModel)]="items" placeholder="item e.g Bornvita" class="text border">
+                                          <input type="text" [(ngModel)]="price" placeholder="price e.g 2,000" class="text border">
+                                          <input type="text" [(ngModel)]="quantities" placeholder="quantities e.g 5" class="text border">
+                                          <button [class]="btnfctles " >Add Items</button>
+                                          <button [class]="btnDisable " (click)="addBudget()" >Add Items</button>
+                                          <button [class]="saveChangesBtn " (click)="saveChanges()" >Save Edit</button>
+                                    </div>
+                              </div>
+                              <div class="text md:w-3/5 p-3">
+                                    <h1 class="text-center bg-blue-600 mb-4 py-1 font-bold text-xl text-white">Items List</h1>
+                                    <table class="text border-collapse border border-slate-500 mx-auto">
+                                          <thead class="text">
+                                                <tr class="text ">
+                                                      <th class="text-sm border border-slatee-500 px-2 sm:px-3 lg:px-10">S/n</th>
+                                                      <th class="text-sm border border-slatee-500 px-2 sm:px-3 lg:px-10">Item</th>
+                                                      <th class="text-sm border border-slatee-500 px-2 sm:px-3 lg:px-10">Cost</th>
+                                                      <th class="text-sm border border-slatee-500 px-2 sm:px-3 lg:px-10">Quantity</th>
+                                                      <th class="text-sm border border-slatee-500 px-2 sm:px-3 lg:px-10">Total Cost</th>
+                                                      <th class="text-sm border border-slatee-500 px-2 sm:px-3 lg:px-10">Actions</th>
+                                                </tr>
+                                          </thead>
+                                          <tbody class="text">
+                                                <tr class="text" *ngFor="let item of budgetArray; index as i">
+                                                      <td class="text border border-slatee-500 px-2 sm:px-3 lg:px-10">{{i + 1}}</td>
+                                                      <td class="text border border-slatee-500 px-2 sm:px-3 lg:px-10">{{item.items}}</td>
+                                                      <td class="text border border-slatee-500 px-2 sm:px-3 lg:px-10">₦ {{item.price}}</td>
+                                                      <td class="text border border-slatee-500 px-2 sm:px-3 lg:px-10">{{item.quantities}}</td>
+                                                      <td class="text border border-slatee-500 px-2 sm:px-3 lg:px-10">₦ {{item.price * item.quantities}}</td>
+                                                      <td class="text border border-slatee-500 px-2 sm:px-3 lg:px-10">
+                                                            <button class="text" (click)="handleEdit(item, i)">
+                                                                  <fa-icon class="mx-1 text-blue-700  hover:scale-105 hover:text-blue-800 " [icon]="editIcon" ></fa-icon>
+                                                            </button>
+                                                            <button class="text" (click)="handleDelete(item, i)">
+                                                                  <fa-icon class="mx-1 text-red-700 hover:scale-105 hover:text-red-800 " [icon]="deleteIcon"></fa-icon>
+                                                            </button>
+                                                      </td>
+                                                </tr>
+                                          </tbody>
+                                    </table>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</body>
+</html>

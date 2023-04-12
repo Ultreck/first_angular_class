@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <div class="text w-full mx-auto h-screen">
+            <div class="text" *ngFor="let item of data.messageArray">
+                  <div class="text">{{item}}</div>
+            </div>
+            <div class="text border flex ">
+                  <input type="text" placeholder=""  class="text border" [(ngModel)]="data.message2">
+                  <button class="text"  (click)="data.sendMessage2()">Send</button>
+            </div>
+      </div>
+</body>
+</html>

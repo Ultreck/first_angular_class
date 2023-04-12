@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <table class="text border-separate border border-slate-500 mx-auto">
+            <thead class="text">
+                  <tr class="text">
+                        <th class="text border border-slate-500 px-10 ">Items</th>
+                        <th class="text border border-slate-500 px-10 ">actions</th>
+                  </tr>
+            </thead>
+            <tbody class="text">
+                  <tr class="text" *ngFor="let item of allItems; index as i">
+                        <td class="text border border-slate-500 px-10 ">{{item}}</td>
+                        <td class="text border border-slate-500 px-10 py-1">
+                              <button class="text-white bg-blue-500 px-10 mx-3">Edit</button>
+                              <button class="text-white bg-red-500 px-10 mx-3" (click)="allItems.splice(i, 1)">Delete</button>
+                        </td>
+                  </tr>
+            </tbody>
+      </table>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <div class="text p-10 w-3/4 mx-auto mt-20  shadow-xl border-t static top-0">
+            <h1 class="text  font-bold font-san text-xl">Blogs</h1>
+            <input type="text" class="text  my-3 w-full " placeholder="title" [(ngModel)]="data.title">
+            <input type="text" class="text  my-3 w-full " placeholder="more" [(ngModel)]="data.more">
+            <button class="text-white my-3 bg-blue-500 w-full py-2" (click)="data.addBlogs()">Add Blog</button>
+      </div>
+</body>
+</html>
