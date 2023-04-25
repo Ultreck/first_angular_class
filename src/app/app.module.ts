@@ -23,6 +23,17 @@ import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AddContactComponent } from './add-contact/add-contact.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
+import { ViewContactComponent } from './view-contact/view-contact.component';
+import { CallLogComponent } from './call-log/call-log.component';
+import { ContactNavComponent } from './contact-nav/contact-nav.component';
+import { SigninComponent } from './signin/signin.component';
+import { ContactFavoriteComponent } from './contact-favorite/contact-favorite.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from 'src/material.module';
+import { OrderByPipe } from './pipes/order-by.pipe';
+import { ContactCallComponent } from './contact-call/contact-call.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +54,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HomeComponent,
     PagenotfoundComponent,
     NavbarComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddContactComponent,
+    ContactListComponent,
+    ViewContactComponent,
+    CallLogComponent,
+    ContactNavComponent,
+    SigninComponent,
+    ContactFavoriteComponent,
+    OrderByPipe,
+    ContactCallComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +71,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FormsModule,
     FontAwesomeModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [UsersService],
   bootstrap: [AppComponent]

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body class="overflow-auto">
+      <div class="text w-full">
+            <div class=" w-full lg:w-1/4 md:translate-x-2 h-screen mx-auto border overflow-auto mb-16">
+                  <div class="text bg-slate-300">
+                        <div class="text mr-5 pt-2 fixed  right-0">
+                              <button class=" " mat-raised-button (click)="addData.saveContact()">
+                                    <span class="text">Done</span>
+                                    <mat-icon>done</mat-icon>
+                              </button>
+                        </div>
+                        <div class="text  w-3/4 mx-auto">
+                              <img src="/assets/avatar.webp" alt="" class="text w-full">
+                        </div>
+                  </div>
+                  <div class="text grid gap-8 px-7  my-10 md:pt-10">
+                        <input type="text" name="firstname" placeholder="first name" [(ngModel)]="addData.firstname" class="text">
+                        <input type="text" name="lastname" placeholder="last name" [(ngModel)]="addData.lastname" class="text">
+                        <input type="text" name="contact" placeholder="contact" [(ngModel)]="addData.contact" class="text">
+                        <select name="" id="" class="text grid px-5 h-11" [(ngModel)]="addData.osType">
+                              <option value="Mobile" class="text">Mobile</option>
+                              <option value="Work" class="text">Work</option>
+                              <option value="Home" class="text">Home</option>
+                              <option value="WorkFax" class="text">WorkFax</option>
+                              <option value="HomeFax" class="text">HomeFax</option>
+                        </select>
+                        <!-- <label for="" class="absolute bottom-48">Optional</label> -->
+                        <!-- <input type="email" placeholder="email... Optional" [(ngModel)]="addData.email" class="text"> -->
+                  </div>
+            </div>
+      </div>
+</body>
+</html>

@@ -8,12 +8,15 @@
       <title>Document</title>
 </head>
 <body>
-      <div class="text" *ngFor="let item of allUsers; index as i">
+      Hello World you are now at users
+      <router-outlet></router-outlet>
+        
+      <!-- <div class="text" *ngFor="let item of allUsers; index as i">
             <p class="text">{{item}}</p>
             <button class="text border mt-1" (click)="userData.deleteData(i)">Delete</button>
             <button class="text border mt-1" data-te-toggle="modal" data-te-target="#exampleModalCenter"
             (click)="userData.editData(i, item)">Edit</button>
-      </div>
+      </div> -->
           
           
 

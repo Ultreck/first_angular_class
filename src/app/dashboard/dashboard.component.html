@@ -1,1 +1,16 @@
-<p>dashboard works!</p>
+
+<h1 class="text">{{myName | uppercase}}</h1>
+<h1 class="text">{{myName | lowercase}}</h1>
+<h1 class="text">{{myName | titlecase}}</h1>
+<h1 class="text">{{myName | slice:0:3 }}</h1>
+<div class="text">{{students | json}}</div>
+<!-- number pipe -->
+<h1 class="text">{{score | number:'2.2-3' }}</h1>
+<h1 class="text">{{0.25 | percent }}</h1>
+<!-- date pipe -->
+<h1 class="text">{{myDate  }}</h1>
+<h1 class="text">{{myDate | date: 'short' }}</h1>
+<h1 class="text">{{myDate | date: 'shortTime' }}</h1>
+<h1 class="text">{{myDate | date: 'shortDate' }}</h1>
+<!-- currency pipe -->
+<h1 class="text">{{'50000' | currency: 'NGN' : 'symbol-narrow'}}</h1>

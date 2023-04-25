@@ -10,6 +10,6 @@ export class AboutComponent {
   constructor(public router : Router){}
 test(){
   // alert("Iss working");
-  this.router.navigate(["/user"]);
+  // this.router.navigate(["/user"]);
 }
 }

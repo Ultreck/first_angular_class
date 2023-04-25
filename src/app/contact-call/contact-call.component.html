@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <div class="text w-full lg:w-1/4 border h-screen mx-auto bg-white z-50">
+            <div class="text h-2/5 gap-4">
+                  <div class="text-center w-20 mx-auto mt-4 rounded-full h-20 bg-orange-500 ">{{displayArr.firstname | slice:0:1}}</div>
+                  <div class="text-center mx-auto mt-2">Calling via <span class="text-blue-500">MTN-NG</span></div>
+                  <div class="text-center text-3xl mt-2" >
+                        <marquee behavior="" direction="">
+                              <div *ngIf="displayArr; else elseBlock">{{displayArr.firstname}} {{displayArr.lastname}}</div>
+                        </marquee>
+                        <ng-template #elseBlock>{{service.callNumber}}</ng-template>
+                  </div>
+                  <div class="text-center text-lg mt-2">
+                        <div *ngIf="displayArr.contact; else elseBlock">{{displayArr.contact}}</div>
+                        <ng-template #elseBlock>{{service.callNumber}}</ng-template>
+                        <span class="text-sm">Mobile</span>
+            </div>
+                  <div class="text animate-ping w-48 h-48  text-center bg-sky-50 mx-auto rounded-full"></div>
+            </div>
+            <div class="text h-3/5 pt-10">
+                  <div class="text-center flex justify-around mt-5">
+                        <div class="text justify-center grid">
+                              <mat-icon class="ml-1">mic_off</mat-icon>
+                              <span class="text">Mute</span>
+                        </div>
+                        <div class="text  grid">
+                              <mat-icon class="ml-2">dialpad</mat-icon>
+                              <span class="text">Keypad</span>
+                        </div>
+                        <div class="text grid">
+                              <mat-icon  class="ml-2">volume_up</mat-icon>
+                              <span class="text">Speaker</span>
+                        </div>
+                  </div>
+                  <div class="text flex justify-around mt-12">
+                        <div class="text grid">
+                              <mat-icon  class="ml-3">add_call</mat-icon>
+                              <span class="text">Add call</span>
+                        </div>
+                        <div class="text grid">
+                              <mat-icon  class="ml-5">sim_card</mat-icon>
+                              <span class="text">Change sim</span>
+                        </div>
+                        <div class="text grid">
+                              <mat-icon  class="ml-2">radio_button_checked</mat-icon>
+                              <span class="text">record</span>
+                        </div>
+                  </div>
+                  <div class="text-center mx-auto mt-20">
+                        <div class="text   bg-red-500 mx-auto w-14 h-14 rounded-full">
+                              <button class="text" (click)="service.endCallFunct()">
+                                    <mat-icon class="text-white mt-4">call_end</mat-icon>
+                              </button>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</body>
+</html>

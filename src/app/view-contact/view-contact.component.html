@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <div class="text w-full lg:w-1/4">
+            <div class="text">
+                  <div class="text-sky-700 flex justify-between p-5">
+                        <div class="text ">
+                              <button class="text" (click)="view.backFunct()">
+                                    <mat-icon>arrow_back</mat-icon>
+                              </button>
+                        </div>
+                        <div class="text ">
+                              <mat-icon class="mx-3">edit</mat-icon>
+                              <mat-icon class="mx-3">star</mat-icon>
+                              <mat-icon class="mx-3">more_vert</mat-icon>
+                        </div>
+                  </div>
+                  <div class="text  mt-5">
+                        <div class="text-4xl pt-5 text-white w-20 h-20 bg-sky-400 mx-auto rounded-full  text-center ">{{displayArr.firstname | slice: 0: 1}}</div>
+                  </div>
+                  <div class="text-lg mt-8 mb-5">
+                        <div class="text-center text-lg">{{displayArr.firstname}} {{displayArr.lastname}}</div>
+                  </div>
+                  <div class="text-sky-700 border flex justify-around py-3">
+                        <div class="text">
+                              <button class="text" (click)="view.callFunct2(displayArr.contact)">
+                                    <mat-icon>call</mat-icon>
+                              </button>
+                              <p class="text">Call</p>
+                        </div>
+                        <div class="text">
+                              <mat-icon>chat</mat-icon>
+                              <p class="text">Text</p>
+                        </div>
+                        <div class="text">
+                              <mat-icon>videocam</mat-icon>
+                              <p class="text">Video</p>
+                        </div>
+                  </div>
+                  <div class="text w-11/12 border mx-auto mt-5 py-4 px-3 rounded-xl shadow">
+                        <p class="text">Contact Info</p>
+                        <div class="text flex justify-between">
+                              <div class="text flex">
+                                    <button class="text" (click)="view.callFunct2(displayArr.contact)">
+                                          <mat-icon class="mx-3">call</mat-icon>
+                                    </button>
+                                          <p class="text">
+                                                {{displayArr.contact}} <br>
+                                                <small class="text-sm font-sm ml-6 text-blue-800">Mobile</small>
+                                          </p>
+                              </div>
+                              <div class="text">
+                                    <mat-icon class="mx-3">videocam</mat-icon>
+                                    <mat-icon class="mx-3">chat</mat-icon>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</body>
+</html>

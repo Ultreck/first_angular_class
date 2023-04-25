@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <div [class]="service.navClassControl">
+            <nav class="text-purple-500 bg-white  w-full   bottom-0 fixed">
+                  <div class="text  lg:w-1/4 mx-auto shadow-lg border">
+                        <ul class="text flex  justify-evenly py-2">
+                              <li class="text hover:text-sky-200 p  hover:underline">
+                                    <a  routerLink="/" class="text-sm">
+                                          <p class="text-center mx-auto">
+                                                <mat-icon class="text-purple-700">schedule</mat-icon><br>
+                                          </p>
+                                          Recent
+                                          
+                                    </a>
+                              </li>
+                              <li class="text hover:text-sky-200 p  hover:underline">
+                                    <a  routerLink="/fav" class="text-sm">
+                                          <p class="text-center mx-auto">
+                                                <mat-icon class="text-purple-700">star</mat-icon><br>
+                                          </p>
+                                          Favorite
+                                    </a>
+                              </li>
+                              <li class="text hover:text-sky-200 p  hover:underline">
+                                    <a  routerLink="/con" class="text-sm">
+                                          <p class="text-center mx-auto">
+                                                <mat-icon class="text-purple-700">contacts</mat-icon><br>
+                                          </p>
+                                          Contact
+                                    </a>
+                              </li>
+                        </ul>
+                  </div>
+            </nav>
+
+      </div>
+</body>
+</html>
