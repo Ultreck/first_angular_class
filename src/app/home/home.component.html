@@ -1,1 +1,21 @@
-<p>home works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+<body>
+      <div class="text w-full grid py-5 px-6 lg:w-1/4 mx-auto">
+            <div class="text shadow-lg grid p-5 gap-5 mt-20">
+                  <h1 class="text-2xl">Sign Up</h1>
+                  <input type="text" name="firstname" class="text" [(ngModel)]="firstname" placeholder="first name">
+                  <input type="text" name="lastname" class="text" [(ngModel)]="lastname" placeholder="last name">
+                  <input type="text" name="email" class="text" [(ngModel)]="email" placeholder="email">
+                  <input type="text" name="password" class="text" [(ngModel)]="password" placeholder="">
+                  <button class="bg-blue-800 text-white py-1 px-6" (click)="signUp()">Submit</button>
+            </div>
+      </div>
+</body>
+</html>
